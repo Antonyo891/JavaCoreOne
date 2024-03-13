@@ -1,11 +1,6 @@
-package org;
-
-import lombok.*;
+package SeminarOne;
 
 import java.time.LocalDateTime;
-
-@Getter
-@ToString
 
 public class Note {
     protected LocalDateTime date;
@@ -16,5 +11,11 @@ public class Note {
         this.id = id;
         this.note = note;
         this.date = LocalDateTime.now().withNano(0);
+    }
+
+    @Override
+    public String toString() {
+        return date +
+                ": " + note + ';';
     }
 }

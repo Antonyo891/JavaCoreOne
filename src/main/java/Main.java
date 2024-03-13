@@ -1,4 +1,6 @@
-import org.FileWorking;
+import SeminarOne.FileWorking;
+import SeminarOne.Note;
+import SeminarOne.NotesController;
 
 import java.util.Scanner;
 
@@ -12,6 +14,7 @@ public class Main {
         System.out.print(text_for_output);
         String text_of_notes = input.next();
         FileWorking fileWorking = new FileWorking(file_name);
-        fileWorking.SavinToTheFile(text_of_notes);
+        Note note = new NotesController().CreateNote(text_of_notes);
+        fileWorking.SavinToTheFile(note.toString());
     }
 }

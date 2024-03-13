@@ -1,11 +1,6 @@
-package org;
-
-import lombok.*;
+package SeminarOne;
 
 import java.util.ArrayList;
-@Getter
-@Setter
-@ToString
 
 public class NotesController {
     protected ArrayList<Note> Notes;
@@ -26,6 +21,13 @@ public class NotesController {
         Note note = new Note(id,text_of_note);
         this.Notes.add(note);
         return note;
+    }
+
+    @Override
+    public String toString() {
+        return "NotesController{" +
+                "Notes=" + Notes +
+                '}';
     }
 
     protected Integer GetId(){
